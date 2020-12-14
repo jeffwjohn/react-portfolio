@@ -10,20 +10,108 @@
   --tertiary-color: rgb(70, 86, 113);
 }
 
+/***************************
+*   HEADER  *
+****************************/
+
+header {
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 8px 8px 0;
+  
+}
+
+header h1 {
+  background-color: var(--secondary-color);
+  font-size: 4vw;
+  width: 30%;
+  height: fit-content;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,Arial, sans-serif;    
+
+}
+
+header a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  justify-content: space-around;
+  width: 50%;
+  
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+header nav ul li {
+  padding: 0 10px;
+}
+
+header nav ul li a {
+  padding: 0px 5px;
+  font-size: 2vw;
+  
+}
+
+header a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+/***************************
+*   HERO  *
+****************************/
+
+.hero {
+  background-image: url("https://github.com/jeffwjohn/Portfolio/blob/master/assets/images/JeffJohnston-img.png?raw=true");
+  background-size: cover;
+  /* background-position: center; */
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 700px;
+  margin-bottom: 8px;
+
+}
+
+/***************************
+*   BODY  *
+****************************/
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  background-color: rgb(238, 238, 249);
+}
+section {
+  display: flex;
+  color: var(--tertiary-color);
+  width: 100%;
+}   
+
+.section-title h2 { 
+ justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  font-size: 2rem ;
+  font-weight: bold;
+  margin: 20px 20px 20px 50px;
 }
-
 /***************************
 *   BIO  *
 ****************************/
@@ -35,7 +123,8 @@ code {
   margin: 20px auto 0 auto;
   justify-content: center;
   border-top: 2px solid var(--tertiary-color);
-  
+  margin-top: var(--spacing-five);
+  margin-bottom: var(--spacing-five);
 }
 
 .bio-text-container {
@@ -49,3 +138,4 @@ code {
   margin: 10px;
   
 }
+
