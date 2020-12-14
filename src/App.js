@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Nav from "./components/Nav";
 import About from "./components/About";
+import Work from "./components/Work";
 import ContactForm from "./components/Contact";
 
 function App() {
+
   const [contactSelected, setContactSelected] = useState(false);
 
   return (
@@ -13,10 +15,11 @@ function App() {
         setContactSelected={setContactSelected}
       ></Nav>
       <main>
-      <ContactForm></ContactForm>
+      {/* <ContactForm></ContactForm> */}
         {!contactSelected ? (
           <>
             <About></About>
+            <Work></Work>
           </>
         ) : (
           <ContactForm></ContactForm>

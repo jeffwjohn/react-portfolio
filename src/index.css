@@ -224,7 +224,8 @@ button {
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
-	font-weight: 600;
+  font-weight: 600;
+  margin-top: 10px ;
 	margin-bottom: 30px;
 	padding: 10px 15px;	
 }
@@ -256,10 +257,22 @@ button[disabled] {
   font-size: 2.25rem;
   font-weight: bold;
   margin: 5px 0;
-  width: 100%;
+  /* width: 100%; */
 }
 
-.contact-h1::after {
+/* .contact-h1::after {
   content: "\a";
   white-space: pre;
+} */
+
+.mx-1 {
+  margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one);
+  color: red;
+}
+
+.mx-2 {
+  margin-right: var(--spacing-two);
+  margin-left: var(--spacing-two);
+  color: blue;
 }
