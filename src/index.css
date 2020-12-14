@@ -4,12 +4,44 @@
   box-sizing: border-box;
 }
 
+/* main {
+	margin: 0 auto;
+	max-width: 90%;
+  padding: 50px 30px;
+} */
+
 :root {
   --primary-color: rgb(49, 52, 62);
   --secondary-color: rgb(159, 198, 205);
   --tertiary-color: rgb(70, 86, 113);
+  --light: #fafafa;
+  --dark: #000000;
+  --darker: #111111;
+  --error: rgb(228, 46, 1);
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
+  --spacing-five: calc(2.5rem);
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
+
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: .1em;
+  background: var(--dark);
+  color: var(--light);
+  font-family: 'Poiret One', cursive;
+
+} */
 /***************************
 *   HEADER  *
 ****************************/
@@ -71,6 +103,11 @@ header a:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
+
+nav  li {
+  cursor: pointer;
+}
+
 /***************************
 *   HERO  *
 ****************************/
@@ -98,7 +135,7 @@ body {
   background-color: rgb(238, 238, 249);
 }
 section {
-  display: flex;
+  /* display: flex; */
   color: var(--tertiary-color);
   width: 100%;
 }   
@@ -139,3 +176,90 @@ h2 {
   
 }
 
+/***************************
+*   FORM  *
+****************************/
+form {
+  width: 40%;
+  
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 1px solid var(--dark);
+  outline: none;
+  border-radius: 3px;
+  transition: box-shadow 0.2s;
+}
+
+input:focus {
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+}
+
+textarea {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+}
+
+/* button {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: var(--secondary);
+} */
+
+button {
+	background: var(--secondary-color);
+	border: var(--dark);
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	padding: 10px 15px;	
+}
+
+button:hover {
+  opacity: .8;
+}
+
+button[disabled] {
+  cursor: default;
+  opacity: .8;
+}
+
+.contact {
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,Arial, sans-serif; 
+  font-weight: 500; */
+	margin: 0 auto;
+	max-width: 90%;
+  padding: 50px 30px;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: .1em;
+  color: var(--primary-color);
+}
+
+.contact-h1 {
+  line-height: 1.25;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.contact-h1::after {
+  content: "\a";
+  white-space: pre;
+}
