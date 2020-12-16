@@ -4,9 +4,9 @@ import headerImage from "../../assets/images/JeffJohnston-img.png";
 function About() {
   return (
     <>
-        <section class="hero">
+        <section className="hero">
         </section>
-        <h2 id="bio" class="section-title">About Me</h2>
+        <h2 id="bio" className="section-title">About Me</h2>
         <section className="bio-wrapper">
         {/* <img src={headerImage} className="hero" style={{ width: "100%" }} alt="portfolio headshot" /> */}
         <div className="bio-text-container">

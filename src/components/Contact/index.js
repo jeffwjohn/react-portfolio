@@ -47,7 +47,7 @@ function ContactForm() {
     // JSX
     return (
       <section className="contact">
-        <h1 className="contact-h1" data-testid="contact">Contact me</h1>
+        <h1 data-testid="contact" className="contact-h1" data-testid="contact">Contact me</h1>
         <form id="contact-form" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>

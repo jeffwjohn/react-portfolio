@@ -1,20 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+
 
 function Nav(props) {
+  const {
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+    contactSelected,
+    setContactSelected,
+  } = props;
 
-    const {
-        workSelected,
-        setWorkSelected,
-        contactSelected,
-        setContactSelected
-      } = props;
-      
+  // const [isHighlighted, setIsHighlighted] = useState(false);
+
+  // const [highlightSelected, setHighlightSelected] = useState();
+
+  // const toggleHighlight = (listItem, i) => {
+  //     setHighlightSelected({listItem});
+  //         setIsHighlighted
+  //         (!isHighlighted);
   return (
-    <header>
-      <h1>Jeff Johnston</h1>
+    <header className="flex-row px-1">
+      <h1>
+        <a data-testid="link" href="/">
+          Jeff Johnston
+        </a>
+      </h1>
       <nav>
-        <ul>
-          <li>
+        <ul className="flex-row">
+          {/* <li className="mx-2">
             <a
               data-testid="about"
               href="#about"
@@ -22,33 +35,28 @@ function Nav(props) {
             >
               About Me
             </a>
-          </li>
-          <li className={`mx-1 ${!contactSelected && 'navActive'}`}>
-            <a
-              data-testid="work"
-              href="#work"
-              onClick={() => setContactSelected(false)}
+          </li> */}
+          {categories.map((category) => (
+            <li
+              className={`mx-1 ${
+                currentCategory.name === category.name &&
+                !contactSelected &&
+                `navActive`
+              }`}
+              key={category.name}
             >
-              Work
-            </a>
-          </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <a
-              data-testid="contact"
-              href="#contact"
-              onClick={() => setContactSelected(true)}
-            >
-              Contact Me
-            </a>
-          </li>
-          <li>
-            <a
-              data-testid="resume"
-              href="../../assets/documents/CV-Resume-2020-Jeffery-Johnston-TECH.pdf"
-              onClick={() => setContactSelected(false)}
-            >
-              Resume
-            </a>
+              <span
+                onClick={() => {
+                  setCurrentCategory(category);
+                  setContactSelected(false);
+                }}
+              >
+                {category.name}
+              </span>
+            </li>
+          ))}
+          <li className={`mx-2 ${contactSelected && "navActive"}`}>
+            <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
         </ul>
       </nav>
