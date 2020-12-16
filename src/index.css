@@ -116,6 +116,22 @@ nav  li {
   cursor: pointer;
 }
 
+.mx-1 {
+  margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one);
+  color: var(--secondary-color);
+}
+
+.mx-2 {
+  margin-right: var(--spacing-two);
+  margin-left: var(--spacing-two);
+  color: var(--secondary-color);
+}
+
+.navActive {
+  color: var(--secondary);
+}
+
 /***************************
 *   HERO  *
 ****************************/
@@ -157,6 +173,7 @@ h2 {
   font-weight: bold;
   margin: 20px 20px 20px 50px;
 }
+
 /***************************
 *   BIO  *
 ****************************/
@@ -185,7 +202,7 @@ h2 {
 }
 
 /***************************
-*   FORM  *
+*   CONTACT FORM  *
 ****************************/
 form {
   width: 40%;
@@ -273,18 +290,142 @@ button[disabled] {
   white-space: pre;
 } */
 
-.mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
-  color: var(--secondary-color);
+/***************************
+*   WORK  *
+****************************/
+
+.grid-wrapper {
+  /* border: 1px solid red; */
+  display: flex;
+  width: 90%;
+  margin: 20px auto 20px auto;
+  justify-content: center;
+  border-top:  2px solid var(--tertiary-color);
+
 }
 
-.mx-2 {
-  margin-right: var(--spacing-two);
-  margin-left: var(--spacing-two);
-  color: var(--secondary-color);
+.container {
+  width: 100%;
+  margin: 2rem auto; 
 }
 
-.navActive {
-  color: var(--secondary);
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 5vw);
+  grid-gap: 0.25rem; 
+  background-color: rgb(238, 238, 249);
+
 }
+
+.gallery__img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  display: block; 
+  background-position: right;
+}
+
+.gallery__img::after {
+  height: 100%;
+  width: 100%;
+  background: rgba(252, 79, 56, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 20;
+}
+
+.gallery__img:hover::after {
+  opacity: 0.5;
+}
+
+.gallery__item--1 {
+  background-image: url("https://github.com/jeffwjohn/Portfolio/blob/master/assets/images/Crypto-Alarm.png?raw=true");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 5;
+
+}
+
+.gallery__item--2 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 3;
+ 
+}
+
+.gallery__item--3 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 5;
+
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  
+}
+
+.gallery__item--5 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 5;
+  grid-row-end: 7;
+
+}
+
+.container div:hover div::after {
+  opacity: 1;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+
+.bottom-left h3 {
+  z-index: 1;
+  position: absolute;
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  left: 0;
+  bottom: 5%;
+  margin:0;
+  opacity: 0.9;
+}
+
+.bottom-left h3:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.gallery__item--1 a:link {
+  font-style: normal;
+  
+}
+
+figure a:visited {
+  text-decoration: none;
+  color: var(--tertiary-color)
+}
+
+figure a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  opacity: 1;
+}
+
