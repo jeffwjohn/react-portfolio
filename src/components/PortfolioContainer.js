@@ -25,6 +25,7 @@ function Portfolio() {
         }
       </div>
     </div>
+    
   );
 }
 

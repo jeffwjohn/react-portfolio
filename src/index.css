@@ -26,25 +26,28 @@
   --spacing-five: calc(2.5rem);
 }
 
+/* Sticky footer styles
+-------------------------------------------------- */
 html,
 body {
-  min-height: 100%;
+  height: 100%;
 }
 
 
+/* Wrapper for page content to push down footer */
 
-/* body {
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  line-height: 1.5;
-  font-size: 18px;
-  letter-spacing: .1em;
-  background: var(--dark);
-  color: var(--light);
-  font-family: 'Poiret One', cursive;
 
-} */
+.main-content {
+  min-height: calc(100vh - 220px);  /* Total viewport height - (height of navbar + height of footer) */
+
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
 /***************************
 *   HEADER  *
 ****************************/
@@ -150,7 +153,7 @@ nav  li {
   /* background-position: center; */
   background-position: top;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 600px;
   margin-bottom: 8px;
 
 }
@@ -471,3 +474,37 @@ figure a:hover {
   opacity: 1;
 }
 
+/***************************
+*   FOOTER  *
+****************************/
+
+.footer p {
+  margin-bottom: 0;
+}
+.social-container {
+  background: #eee;
+  padding: 25px 50px;
+  margin-bottom: 0;
+}
+
+a.social {
+  margin: 0 2rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-8px);
+}
+
+a.github {
+  color: black;
+}
+
+a.linkedin {
+  color: blue;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
