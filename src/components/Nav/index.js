@@ -47,9 +47,11 @@ function Nav(props) {
             >
               <span
                 onClick={() => {
+                  props.handlePageChange(category);
                   setCurrentCategory(category);
                   setContactSelected(false);
                 }}
+                className={ props.currentPage === category ? 'nav-link active' : 'nav-link'}
               >
                 {category.name}
               </span>
