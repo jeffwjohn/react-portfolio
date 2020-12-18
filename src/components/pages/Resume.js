@@ -8,7 +8,8 @@ const Resume = () => {
 <h2 className="section-title">Resume</h2>
 <section  className="resume-wrapper">
         <div>
-        <p>View <a href={resume}>Resume PDF</a></p>
+        <p className="resume">View/download complete <a href={resume}>resume PDF</a></p>
+        <h3 className="">Full-Stack Skill Summary</h3>
           <ul>
             Front-end Proficiencies
             <li>HTML</li>
