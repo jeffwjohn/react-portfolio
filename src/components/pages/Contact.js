@@ -1,57 +1,63 @@
-import React, { useState } from 'react';
-import { validateEmail } from '../../utils/helpers';
-
+import React, { useState } from "react";
+import { validateEmail } from "../../utils/helpers";
 
 function ContactForm() {
-    // Hook
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  // Hook
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-    const { name, email, message } = formState;
+  const { name, email, message } = formState;
 
-    const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
-    function handleChange(e) {
-      if (e.target.name === "email") {
-        const isValid = validateEmail(e.target.value);
-        console.log(isValid);
-        // isValid conditional statement
-        if (!isValid) {
-          setErrorMessage("Your email is invalid.");
-        } else {
-          setErrorMessage("");
-        }
+  function handleChange(e) {
+    if (e.target.name === "email") {
+      const isValid = validateEmail(e.target.value);
+      console.log(isValid);
+      // isValid conditional statement
+      if (!isValid) {
+        setErrorMessage("Your email is invalid.");
       } else {
-        if (!e.target.value.length) {
-          setErrorMessage(`${e.target.name} is required.`);
-        } else {
-          setErrorMessage("");
-        }
-        
+        setErrorMessage("");
       }
-      
-      if (!errorMessage) {
-        setFormState({ ...formState, [e.target.name]: e.target.value });
+    } else {
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} is required.`);
+      } else {
+        setErrorMessage("");
       }
-      
-
-      // We use the spread operator, ...formState, so we can retain the other key-value pairs in this object. Without the spread operator, the formState object would be overwritten to only contain the name: value key pair.
     }
-      
-    //   console.log(formState);
-     
-    function handleSubmit(e) {
-        e.preventDefault();
-        console.log(formState);
-      }
 
-    // JSX
-    return (
-      <section className="contact">
-        <h1 data-testid="contact" className="contact-h1" data-testid="contact">Contact me</h1>
+    if (!errorMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
+
+    // We use the spread operator, ...formState, so we can retain the other key-value pairs in this object. Without the spread operator, the formState object would be overwritten to only contain the name: value key pair.
+  }
+
+  //   console.log(formState);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(formState);
+  }
+
+  // JSX
+  return (
+    <>
+      <h2 data-testid="contact" className="section-title">
+        Contact Me
+      </h2>
+      <section className="contact-wrapper">
+      
         <form id="contact-form" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>
             <input
+              id="name"
               type="text"
               defaultValue={name}
               onBlur={handleChange}
@@ -59,8 +65,9 @@ function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="email">Email address:</label>
+            <label htmlFor="email">Email:</label>
             <input
+              id="email"
               type="email"
               defaultValue={email}
               name="email"
@@ -68,7 +75,7 @@ function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="message">Message:</label>
+            <label id="message" htmlFor="message">Message:</label>
             <textarea
               name="message"
               defaultValue={message}
@@ -81,10 +88,13 @@ function ContactForm() {
               <p className="error-text">{errorMessage}</p>
             </div>
           )}
-          <button data-testid="submit" type="submit">Submit</button>
+          <button data-testid="submit" type="submit">
+            Submit
+          </button>
         </form>
-      </section>
-    );
-    }
-    
-    export default ContactForm;
+        </section>
+    </>
+  );
+}
+
+export default ContactForm;
