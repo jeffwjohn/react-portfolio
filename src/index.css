@@ -176,9 +176,8 @@ section {
 }   
 
 .section-title { 
- border-bottom: 2px solid var(--tertiary-color);
- padding: 10px 0px 10px 14px;
- margin: 20 0;
+ /* border-bottom: 2px solid var(--tertiary-color); */
+ padding: 100px 0px 10px 14px;
 }
 
 h2 {
@@ -203,7 +202,8 @@ h2 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  line-height: 1.5;        
+  line-height: 1.5;   
+  padding-bottom: 30px;     
 }
 
 .bio-text {
@@ -218,12 +218,13 @@ h2 {
   /* border: 1px solid red; */
   display: flex;
   width: 90%;
-  margin: 20px auto 20px auto;
+  margin: 20px auto 10px auto;
   justify-content: left;
+  padding-top: 40px;
 }
 
 .resume {
-  margin-top: 20px;
+  margin: 20px 0 20px 0;
 }
 
 /***************************
@@ -231,7 +232,6 @@ h2 {
 ****************************/
 .contact-wrapper {
   /* border: 1px solid red; */
-  display: flex;
   width: 90%;
   margin: 20px auto 20px auto;
   justify-content: left;
@@ -319,6 +319,10 @@ button[disabled] {
   color: var(--primary-color);
 }
 
+.contact-title {
+  padding-top: 40px;
+  margin-bottom: 0;
+}
 .contact-h1 {
   line-height: 1.25;
   font-size: 2.25rem;

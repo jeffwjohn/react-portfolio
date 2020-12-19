@@ -10,10 +10,6 @@ function Work(props) {
 
     return (
       <>
-        <h2 id="work" className="section-title">
-          Portfolio
-        </h2>
-
 <Wrapper>
           {worksList.map(work => (
           <WorkCard 

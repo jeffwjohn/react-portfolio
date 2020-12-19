@@ -5,13 +5,11 @@ const Resume = () => {
 
   return (
 <>
-<h2 className="section-title">Resume</h2>
 <section  className="resume-wrapper">
         <div>
-        <p className="resume">View/download complete <a href={resume}>resume PDF</a></p>
-        <h3 className="">Full-Stack Skill Summary</h3>
+        <h3 className="resume">Full-Stack Skill Summary</h3>
           <ul>
-            Front-end Proficiencies
+            <strong>Front-end Proficiencies</strong>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
@@ -22,7 +20,7 @@ const Resume = () => {
           </ul>
           <br></br>
           <ul>
-            Back-end Proficiencies
+            <strong>Back-end Proficiencies</strong>
             <li>APIs</li>
             <li>Node</li>
             <li>Express</li>
@@ -30,6 +28,7 @@ const Resume = () => {
             <li>MongoDB, Mongoose</li>
             <li>REST</li>
           </ul>
+          <p className="resume">View/download complete <a href={resume}>resume PDF</a></p>
         </div>
 </section>
 </>

@@ -48,52 +48,56 @@ function ContactForm() {
   // JSX
   return (
     <>
-      <h2 data-testid="contact" className="section-title">
-        Contact Me
-      </h2>
       <section className="contact-wrapper">
-      
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              id="name"
-              type="text"
-              defaultValue={name}
-              onBlur={handleChange}
-              name="name"
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              id="email"
-              type="email"
-              defaultValue={email}
-              name="email"
-              onBlur={handleChange}
-            />
-          </div>
-          <div>
-            <label id="message" htmlFor="message">Message:</label>
-            <textarea
-              name="message"
-              defaultValue={message}
-              onBlur={handleChange}
-              rows="5"
-            />
-          </div>
-          {errorMessage && (
+<div>
+        <h3 data-testid="contact" className="contact-title">
+          Contact Me
+        </h3>
+</div>
+       <div>
+          <form id="contact-form" onSubmit={handleSubmit}>
             <div>
-              <p className="error-text">{errorMessage}</p>
+              <label htmlFor="name">Name:</label>
+              <input
+                id="name"
+                type="text"
+                defaultValue={name}
+                onBlur={handleChange}
+                name="name"
+              />
             </div>
-          )}
-          <button data-testid="submit" type="submit">
-            Submit
-          </button>
-        </form>
-        </section>
-    </>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                id="email"
+                type="email"
+                defaultValue={email}
+                name="email"
+                onBlur={handleChange}
+              />
+            </div>
+            <div>
+              <label id="message" htmlFor="message">Message:</label>
+              <textarea
+                name="message"
+                defaultValue={message}
+                onBlur={handleChange}
+                rows="5"
+              />
+            </div>
+            {errorMessage && (
+              <div>
+                <p className="error-text">{errorMessage}</p>
+              </div>
+            )}
+            <button data-testid="submit" type="submit">
+              Submit
+            </button>
+          </form>
+          </div>
+          </section>
+      </>
+       
   );
 }
 

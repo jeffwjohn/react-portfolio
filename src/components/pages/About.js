@@ -6,10 +6,13 @@ function About() {
     <>
         <section className="hero">
         </section>
-        <h2 id="bio" className="section-title">About Me</h2>
+
         <section className="bio-wrapper">
         {/* <img src={headerImage} className="hero" style={{ width: "100%" }} alt="portfolio headshot" /> */}
         <div className="bio-text-container">
+            <div>
+              <h3 className="bio-text">About Me</h3>
+            </div>
             <div>
                 <p className="bio-text">The most interesting thing about me is that I wear many hats. Before I decided to
                     learn web development, I dreamt of being a rock star. Following a short stint playing local clubs
