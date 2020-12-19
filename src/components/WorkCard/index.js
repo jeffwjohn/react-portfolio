@@ -1,22 +1,36 @@
 import React from 'react';
-import './style.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
+
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
 
 function WorkCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <a onClick={() => openInNewTab(`${props.deployed}`)}>
+          <img className="card-img-top" alt={props.name} src={props.image} />
+        </a>
       </div>
       <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
+        <ul className="list-group list-group-flush">
+          <li
+            className="list-group-item"
+            onClick={() => openInNewTab(`${props.deployed}`)}
+          >
+            {props.name}
           </li>
-          <li>
-            <strong>Deployed App:</strong> {props.deployed}
-          </li>
-          <li>
-            <strong>GitHub Repo:</strong> {props.repo}
+
+          <li
+            className="list-group-item card-link" onClick={() => openInNewTab(`${props.repo}`)}>
+            <a className="github social-card">
+              <FontAwesomeIcon icon={faGithub} size="2x" /> 
+            </a>
           </li>
         </ul>
       </div>
