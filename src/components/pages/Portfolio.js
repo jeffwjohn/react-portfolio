@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
+import WorkCard from '../../components/WorkCard';
+import works from '../../works.json';
+import Wrapper from "../Wrapper";
 
-function Work() {
+function Work(props) {
+
+  
+  const [worksList, setWorksList] = useState(works);
 
     return (
       <>
@@ -8,23 +14,19 @@ function Work() {
           Work
         </h2>
 
-        <section className="grid-wrapper">
-          <div className="container">
-            <div className="gallery">
-              {/* <!-- <figure className="gallery__item gallery__item--1">
-                <a href="https://jeffwjohn.github.io/run-buddy">
-                    <div className="gallery__img gallery__item--1"></div>
-                </a>
-
-                <div className="bottom-left">
-                    <a href="https://jeffwjohn.github.io/run-buddy">
-                        <h3>Run Buddy</h3>
-                    </a>
-                </div>
-
-            </figure> --> */}
-
-              <figure className="gallery__item gallery__item--1">
+<Wrapper>
+          {worksList.map(work => (
+          <WorkCard 
+          id = {work.id}
+          name = {work.name}
+          deployed = {work.deployed}
+          image = {work.image}
+          repo = {work.repo} 
+          key = {work.id} 
+          />
+        ))}
+</Wrapper>
+              {/* <figure className="gallery__item gallery__item--1">
                 <a href="https://team-7-hulk-smash.github.io/Crypto-Alarm/">
                   <div className="gallery__img gallery__item--1"></div>
                 </a>
@@ -64,7 +66,7 @@ function Work() {
                     <h3>House Store</h3>
                   </a>
                 </div>
-              </figure>
+              </figure> */}
 
               {/* <!-- <figure className="gallery__item gallery__item--4">
                 <a href=" https://jeffwjohn.github.io/Tsunami-Coffee/"><img src="assets/images/Tsunami.png"
@@ -77,7 +79,7 @@ function Work() {
                 </div>
             </figure> --> */}
 
-              <figure className="gallery__item gallery__item--4">
+              {/* <figure className="gallery__item gallery__item--4">
                 <a href="https://jeffwjohn.github.io/run-buddy">
                   <img
                     src="https://github.com/jeffwjohn/Portfolio/blob/master/assets/images/hero-bg.jpg?raw=true"
@@ -105,10 +107,7 @@ function Work() {
                     <h3>Tea Cozy</h3>
                   </a>
                 </div>
-              </figure>
-            </div>
-          </div>
-        </section>
+              </figure> */}
       </>
     );
   }

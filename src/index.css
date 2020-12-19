@@ -175,8 +175,10 @@ section {
   width: 100%;
 }   
 
-.section-title h2 { 
+.section-title { 
  justify-content: center;
+ border-bottom: 2px solid var(--tertiary-color);
+ padding-bottom: 10px;
 }
 
 h2 {
@@ -195,7 +197,6 @@ h2 {
   width: 90%;
   margin: 20px auto 0 auto;
   justify-content: center;
-  border-top: 2px solid var(--tertiary-color);
 }
 
 .bio-text-container {
@@ -219,8 +220,6 @@ h2 {
   width: 90%;
   margin: 20px auto 20px auto;
   justify-content: left;
-  border-top:  2px solid var(--tertiary-color);
-
 }
 
 .resume {
@@ -236,8 +235,6 @@ h2 {
   width: 90%;
   margin: 20px auto 20px auto;
   justify-content: left;
-  border-top:  2px solid var(--tertiary-color);
-
 }
 form {
   width: 40%;
@@ -345,8 +342,6 @@ button[disabled] {
   width: 90%;
   margin: 20px auto 20px auto;
   justify-content: center;
-  border-top:  2px solid var(--tertiary-color);
-
 }
 
 .container {
