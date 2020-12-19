@@ -11,7 +11,7 @@ function Work(props) {
     return (
       <>
         <h2 id="work" className="section-title">
-          Work
+          Portfolio
         </h2>
 
 <Wrapper>

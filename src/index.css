@@ -154,7 +154,7 @@ nav  li {
   background-position: top;
   background-repeat: no-repeat;
   height: 600px;
-  margin-bottom: 8px;
+  
 
 }
 
@@ -176,15 +176,15 @@ section {
 }   
 
 .section-title { 
- justify-content: center;
  border-bottom: 2px solid var(--tertiary-color);
- padding-bottom: 10px;
+ padding: 10px 0px 10px 14px;
+ margin: 20 0;
 }
 
 h2 {
   font-size: 2rem ;
   font-weight: bold;
-  margin: 20px 20px 20px 50px;
+  
 }
 
 /***************************
@@ -472,6 +472,11 @@ figure a:hover {
 /***************************
 *   FOOTER  *
 ****************************/
+
+footer {
+  border-top: 2px solid var(--tertiary-color);
+
+}
 
 .footer p {
   margin-bottom: 0;
