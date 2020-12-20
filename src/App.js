@@ -28,26 +28,16 @@ function App() {
 
   return (
     <>
-      <div id="wrap">
-        <div>
+      <main className="main">
           <Header
             currentPage={currentPage}
             handlePageChange={handlePageChange}
-          />
-          </div>
-<div className="main-content">
-            
-              {
-                // Render the component returned by 'renderPage()'
-                // YOUR CODE HERE
-                renderPage(currentPage)
-              }
-            
-            </div>
-          <footer className="footer">
-            <SocialFollow />
-          </footer>
-      </div>
+          />   
+        <div className="main-content">{renderPage(currentPage)}</div>
+      </main>
+      <footer className="footer">
+        <SocialFollow />
+      </footer>
     </>
   );
 }

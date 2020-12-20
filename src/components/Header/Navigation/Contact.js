@@ -50,16 +50,17 @@ function ContactForm() {
     <>
       <section className="contact-wrapper">
 <div>
-        <h3 data-testid="contact" className="contact-title">
+        <h3 data-testid="contact" className="contact-title title">
           <strong>Contact Me</strong>
         </h3>
 </div>
-       <div>
+       <div className="form-wrapper">
           <form id="contact-form" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name">Name:</label>
+              <label htmlFor="name"></label>
               <input
                 id="name"
+                placeholder="Name"
                 type="text"
                 defaultValue={name}
                 onBlur={handleChange}
@@ -67,9 +68,10 @@ function ContactForm() {
               />
             </div>
             <div>
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email"></label>
               <input
                 id="email"
+                placeholder="Email"
                 type="email"
                 defaultValue={email}
                 name="email"
@@ -77,9 +79,10 @@ function ContactForm() {
               />
             </div>
             <div>
-              <label id="message" htmlFor="message">Message:</label>
+              <label id="message" htmlFor="message"></label>
               <textarea
                 name="message"
+                placeholder="Message"
                 defaultValue={message}
                 onBlur={handleChange}
                 rows="5"
@@ -90,9 +93,11 @@ function ContactForm() {
                 <p className="error-text">{errorMessage}</p>
               </div>
             )}
-            <button data-testid="submit" type="submit">
-              Submit
-            </button>
+            <div className="button-wrap">
+              <button id="submit" className="submit" data-testid="submit" type="submit">
+                Submit
+              </button>
+            </div>
           </form>
           </div>
           </section>
