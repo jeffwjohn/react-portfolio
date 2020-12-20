@@ -8,7 +8,6 @@ import {
 export default function SocialFollow() {
   return (
 <div className="social-container  text-center" >
-      <h4></h4>
       <a href="https://github.com/jeffwjohn"
         className="github social">
         <FontAwesomeIcon icon={faGithub} size="2x" />

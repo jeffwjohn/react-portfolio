@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import NavTabs from "./components/NavTabs";
-import About from "./components/pages/About";
-import Portfolio from "./components/pages/Portfolio";
-import Resume from "./components/pages/Resume";
-import Contact from "./components/pages/Contact";
-import SocialFollow from "./SocialFollow";
+import Header from "./components/Header";
+import About from "./components/Header/Navigation/About";
+import Portfolio from "./components/Header/Navigation/Portfolio";
+import Resume from "./components/Header/Navigation/Resume";
+import Contact from "./components/Header/Navigation/Contact";
+import SocialFollow from "./components/Footer";
 
 function App() {
   const [currentPage, handlePageChange] = useState("Home");
@@ -30,7 +30,7 @@ function App() {
     <>
       <div id="wrap">
         <div>
-          <NavTabs
+          <Header
             currentPage={currentPage}
             handlePageChange={handlePageChange}
           />

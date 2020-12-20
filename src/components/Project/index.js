@@ -20,14 +20,14 @@ function WorkCard(props) {
       <div className="content">
         <ul className="list-group list-group-flush">
           <li
-            className="list-group-item"
+            className="deployed list-group-item"
             onClick={() => openInNewTab(`${props.deployed}`)}
           >
             {props.name}
           </li>
 
           <li
-            className="list-group-item card-link" onClick={() => openInNewTab(`${props.repo}`)}>
+            className="list-group-item" onClick={() => openInNewTab(`${props.repo}`)}>
             <a className="github social-card">
               <FontAwesomeIcon icon={faGithub} size="2x" /> 
             </a>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NavTabs(props) {
+function Header(props) {
   const tabs = ['About', 'Portfolio', 'Resume', 'Contact' ];
   return (
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,4 +24,4 @@ function NavTabs(props) {
   );
 }
 
-export default NavTabs;
+export default Header;
