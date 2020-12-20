@@ -7,7 +7,7 @@ const Resume = () => {
 <>
 <section  className="resume-wrapper">
         <div>
-        <h3 className="resume">Full-Stack Skill Summary</h3>
+        <h3 className="resume h3">Full-Stack Skill Summary</h3>
           <ul>
             <strong>Front-end Proficiencies</strong>
             <li>HTML</li>
