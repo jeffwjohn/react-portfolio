@@ -7,7 +7,7 @@ export function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-export function openInNewTab(url) {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
+// export function openInNewTab(url) {
+//   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+//   if (newWindow) newWindow.opener = null
+// }

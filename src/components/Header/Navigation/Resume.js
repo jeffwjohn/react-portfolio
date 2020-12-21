@@ -1,6 +1,5 @@
 import React from "react";
 import resume from "../../../assets/documents/CV-Resume-2020-Jeffery-Johnston-TECH.pdf";
-import { openInNewTab } from '../../../utils/helpers';
 
 const Resume = () => {
 
@@ -29,7 +28,7 @@ const Resume = () => {
             <li>MongoDB, Mongoose</li>
             <li>REST</li>
           </ul>
-          <p className="resume">View/download complete <a onClick={() => openInNewTab(`${resume}`)} href='/#resume'>resume PDF</a></p>
+          <p className="resume">View/download complete <a href={resume}>resume PDF</a></p>
         </div>
 </section>
 </>

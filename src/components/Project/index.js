@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
-import { openInNewTab } from '../../utils/helpers';
+
 
 function WorkCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <a onClick={() => openInNewTab(`${props.deployed}`)} href='/#portfolio'>
+        <a href={props.deployed}>
           <img className="card-img-top" alt={props.name} src={props.image} />
         </a>
       </div>
@@ -17,14 +17,14 @@ function WorkCard(props) {
         <ul className="list-group list-group-flush">
           <li
             className="deployed list-group-item"
-            onClick={() => openInNewTab(`${props.deployed}`)} href='/#portfolio'
+            onClick={() => window.location.assign(`${props.deployed}`)} href={props.deployed}
           >
             <div className="app-name">{props.name}</div>
           </li>
 
           <li
-            className="list-group-item" onClick={() => openInNewTab(`${props.repo}`)}>
-            <a className="github social-card" href='/#portfolio'>
+            className="list-group-item" href={props.repo}>
+            <a className="github social-card" href={props.repo}>
               <FontAwesomeIcon icon={faGithub} size="2x" /> 
             </a>
           </li>
