@@ -5,18 +5,20 @@ import {
     faTwitter,
     faLinkedin
   } from "@fortawesome/free-brands-svg-icons";
+import { openInNewTab } from "../../utils/helpers"
+
 export default function SocialFollow() {
   return (
 <div className="social-container  text-center" >
-      <a href="https://github.com/jeffwjohn"
+      <a onClick={() => openInNewTab("https://github.com/jeffwjohn")} href="/#"
         className="github social">
         <FontAwesomeIcon icon={faGithub} size="2x" />
       </a>
-      <a href="https://www.linkedin.com/in/jeff-johnston-coder"
+      <a onClick={() => openInNewTab("https://www.linkedin.com/in/jeff-johnston-coder")} href="/#"
         className="linkedin social">
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </a>
-      <a href="https://twitter.com/jeffwjohn"
+      <a onClick={() => openInNewTab("https://twitter.com/jeffwjohn")} href="/#"
         className="twitter social">
         <FontAwesomeIcon icon={faTwitter} size="2x" />
       </a>

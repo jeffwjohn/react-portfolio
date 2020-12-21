@@ -3,11 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
-
-const openInNewTab = (url) => {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
+import { openInNewTab } from '../../utils/helpers';
 
 function WorkCard(props) {
   return (
