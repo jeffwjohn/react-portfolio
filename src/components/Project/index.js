@@ -9,7 +9,7 @@ function WorkCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <a onClick={() => openInNewTab(`${props.deployed}`)} href="/#">
+        <a onClick={() => openInNewTab(`${props.deployed}`)} href='react-portfolio/#portfolio'>
           <img className="card-img-top" alt={props.name} src={props.image} />
         </a>
       </div>
@@ -17,14 +17,14 @@ function WorkCard(props) {
         <ul className="list-group list-group-flush">
           <li
             className="deployed list-group-item"
-            onClick={() => openInNewTab(`${props.deployed}`)} href="/#"
+            onClick={() => openInNewTab(`${props.deployed}`)} href='react-portfolio/#portfolio'
           >
             <div className="app-name">{props.name}</div>
           </li>
 
           <li
             className="list-group-item" onClick={() => openInNewTab(`${props.repo}`)}>
-            <a className="github social-card" href="/#">
+            <a className="github social-card" href='react-portfolio/#portfolio'>
               <FontAwesomeIcon icon={faGithub} size="2x" /> 
             </a>
           </li>
