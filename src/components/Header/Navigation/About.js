@@ -9,7 +9,7 @@ function About() {
         <section className="bio-wrapper">
         <div className="bio-text-container">
             <div>
-              <h3 className="bio-text title"><strong>About Me</strong></h3>
+              <h3 className="bio-text title">About Me</h3>
             </div>
             <div>
                 <p className="bio-text">The most interesting thing about me is that I wear many hats. Before I decided to

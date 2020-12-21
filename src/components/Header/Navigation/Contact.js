@@ -51,7 +51,7 @@ function ContactForm() {
       <section className="contact-wrapper">
 <div>
         <h3 data-testid="contact" className="contact-title title">
-          <strong>Contact Me</strong>
+        Contact Me
         </h3>
 </div>
        <div className="form-wrapper">

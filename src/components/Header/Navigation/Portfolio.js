@@ -4,7 +4,7 @@ import works from '../../../works.json';
 import Wrapper from "../../Project/ProjectsWrapper";
 
 function Work(props) {
-  const [worksList, setWorksList] = useState(works);
+  const [worksList] = useState(works);
     return (
       <>
 <Wrapper>

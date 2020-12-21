@@ -10,8 +10,6 @@ function App() {
   const [currentPage, handlePageChange] = useState("Home");
 
   const renderPage = (currentPage) => {
-    // Add a switch statement that will return the appropriate component of the 'currentPage'
-    // YOUR CODE HERE
     switch (currentPage) {
       case "About":
         return <About />;

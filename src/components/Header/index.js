@@ -4,7 +4,7 @@ function Header(props) {
   const tabs = ['About', 'Portfolio', 'Resume', 'Contact' ];
   return (
 <>
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav className="navbar navbar-dark bg-dark sticky-top">
   <span className="navbar-brand mb-0 h1"><h1 className="header pb-0 mb-0">Jeff Johnston</h1><small className="text-muted ml-1">Full-Stack Web Developer</small></span>
         <ul id="page-list" className="nav">
           {tabs.map(tab => (
