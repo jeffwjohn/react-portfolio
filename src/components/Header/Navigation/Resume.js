@@ -29,7 +29,7 @@ const Resume = () => {
             <li>MongoDB, Mongoose</li>
             <li>REST</li>
           </ul>
-          <p className="resume">View/download complete <a onClick={() => openInNewTab(`${resume}`)} href='react-portfolio/#resume'>resume PDF</a></p>
+          <p className="resume">View/download complete <a onClick={() => openInNewTab(`${resume}`)} href='/#resume'>resume PDF</a></p>
         </div>
 </section>
 </>
